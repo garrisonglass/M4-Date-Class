@@ -3,7 +3,7 @@
 #include <sstream>
 #include <iostream>
 #include <string>
-
+#include <cmath>
 using namespace std;
 
 
@@ -251,4 +251,53 @@ static int dateToDays(const Date& d)
 	totalDays += d.getday();
 
 	return totalDays;
+}
+
+//subtraction operator (d1 - d2)
+//Returns the number of days between dates.
+int Date::operator-(const Date& other) const
+{
+	int d1 = dateToDays(*this);
+	int d2 = dateToDays(other);
+	return abs(d1 - d2);//elapsed days
+}
+
+//Stream insertion operator (cout << d)
+
+ostream& operator<<(ostream& out, const Date& d)
+{
+	static const string month_by_Name[] =
+	{
+		"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+	};
+	out << month_by_Name[d.getmonth() - 1] 
+		<< " "  << d.getday() 
+		<< ", " << d.getyear();
+	return out;
+}
+
+//Stram extraction operator (cin >> d)
+istream& operator>>(istream& in, Date& d)
+{
+	int m, day, y;
+	char slash1, slash2;
+
+	cout << "Enter date (MM/DD/YYYY): ";
+
+	if (!(in >> m >> slash1 >> day >> slash2 >> y))
+	{
+		in.clear();//Reset error state
+		in.ignore(numeric_limits<streamsize>::max(), '\n');//Discard bad input
+		d.setDate(1, 1, 1900);//Default date
+		return in;
+	}
+	if (slash1 == '/' && slash2 == '/' && d.isValidDate(m, day, y))
+	{
+		d.setDate(m, day, y);
+	}
+	else
+	{
+		d.setDate(1, 1, 1900);//Default date
+	}
+	return in;	
 }
