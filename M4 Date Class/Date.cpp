@@ -220,3 +220,35 @@ Date& Date::operator--()
 	return *this;
 }
 
+//Postfix decrement operator (d--)
+Date Date::operator--(int)
+{
+	Date temp = *this;//Save old value
+	--(*this);        //Reuse prefix logic
+	return temp;      //Return old value
+}
+
+//Helper converts date to absolute day count
+static int dateToDays(const Date& d)
+{
+	int m = d.getmonth();
+	int y = d.getyear();
+
+	int totalDays = y * 365 + (y / 4) - (y / 100) + (y / 400);
+
+	static const int days_by_month[] = 
+		{ 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+	for (int i = 1; i < m; i++)
+	{
+		totalDays += days_by_month[i];
+	}
+	if (m > 2 && d.isLeapYear())
+	{
+		totalDays++;
+	}
+
+	totalDays += d.getday();
+
+	return totalDays;
+}
