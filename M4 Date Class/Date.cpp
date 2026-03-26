@@ -199,3 +199,24 @@ Date Date::operator++(int)
 	++(*this);        //Reuse prefix logic
 	return temp;      //Return old value
 }
+
+//Prefix decrement operator (--d)
+Date& Date::operator--()
+{
+	day--;
+
+	if (day < 1)
+	{
+		month--;
+
+		if (month < 1)
+		{
+			month = 12;
+			year--;
+		}
+
+		day = lastDay(month, year);
+	}
+	return *this;
+}
+
