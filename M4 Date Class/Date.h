@@ -1,4 +1,4 @@
-// Date_Class.cpp : This file contains the declreations of the Date class
+// Date_Class.cpp : This file contains the declarations of the Date class
 
 #ifndef DATE_H
 #define DATE_H
@@ -76,16 +76,16 @@ public:
 	
 	//operator overloads
 
-	//Prefix increament: ++d
+	//Prefix increment: ++d
 	Date& operator++();
 
-	//Postfix increament: d++
+	//Postfix increment: d++
 	Date operator++(int);
 
-	//Prefix decreament: --d
+	//Prefix decrement: --d
 	Date& operator--();
 
-	//Postfix decreament: d--
+	//Postfix decrement: d--
 	Date operator--(int);
 
 	//Subtraction: returns the number of days between dates
