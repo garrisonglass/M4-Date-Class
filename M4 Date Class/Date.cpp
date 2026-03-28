@@ -131,6 +131,7 @@ bool Date::isValidDate(int m, int d, int y) const
 	{
 		return false;
 	}
+	return true;
 }
 
 
@@ -301,3 +302,5 @@ istream& operator>>(istream& in, Date& d)
 	}
 	return in;	
 }
+
+//lecture 4/19/26 stop at 1:05
