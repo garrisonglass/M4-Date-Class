@@ -277,7 +277,7 @@ ostream& operator<<(ostream& out, const Date& d)
 	return out;
 }
 
-//Stram extraction operator (cin >> d)
+//Stream extraction operator (cin >> d)
 istream& operator>>(istream& in, Date& d)
 {
 	int m, day, y;
