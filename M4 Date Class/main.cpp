@@ -45,4 +45,23 @@ int main()
 	cout << "Returned (post) value: " << d4_post << "\n";
 	cout << "New stored value: " << d4 << "\n";
 
+	//6. Test subtraction operator (d1 - d2)
+	Date a(10, 20, 1986);
+	Date b(6, 8, 1986);
+	cout << "\nTesting subtraction operator -\n";
+	cout << a << " - " << b << " = " << (a - b) << " days\n";
+	
+	
+	Date c(6, 8, 1986);
+	Date d(10, 20, 1986);
+	cout << "\nTesting reverse order\n";
+	cout << c << " - " << d << " = " << (c - d) << " days\n";
+
+	Date e(1, 1, 2000);
+	Date f(1, 1, 2000);
+	cout << "\nTesting same date (Y2K)\n";
+	cout << e << " - " << f << " = " << (e - f) << " days\n";
+	
+	cout << "\n===== END OF OPERATOR TESTS =====\n";
+	return 0;
 }
