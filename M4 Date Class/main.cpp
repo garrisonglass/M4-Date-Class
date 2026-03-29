@@ -10,10 +10,10 @@ int main()
 	cout << "===== DATE VLASS OPERATOR TESTS =====\n\n";
 
 	//1. Test stream extraction (>>) and instertion (<<) operators
-	Date userDate;
-	cout << "Testing input operator >>\n";
-	cin >> userDate;
-	cout << "You entered: " << userDate << "\n\n";
+	//Date userDate;
+	//cout << "Testing input operator >>\n";
+	//cin >> userDate;
+	//cout << "You entered: " << userDate << "\n\n";
 
 
 	//2. Test prefix increment operator (++d)
@@ -29,5 +29,12 @@ int main()
 	Date d2_post = d2++;
 	cout << "Returned (post) value: " << d2_post << "\n";
 	cout << "New stored value: " << d2 << "\n";
+
+	//4. Test prefix decrement operator (--d)
+	Date d3(1, 1, 2025);
+	cout << "\nStarting date for prefix decrement test: " << d3 << "\n";
+	cout << "Applying --d3\n";
+	--d3;
+	cout << "Results: " << d3 << "\n\n";
 
 }
