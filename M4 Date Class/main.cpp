@@ -14,5 +14,12 @@ int main()
 	cout << "Testing input operator >>\n";
 	cin >> userDate;
 	cout << "You entered: " << userDate << "\n\n";
-}
 
+
+	//2. Test prefix increment operator (++d)
+	Date d1(12, 31, 2025);
+	cout << "Starting date for prefix increment test: " << d1 << "\n";
+	++d1;
+	cout << "Results: " << d1 << "\n\n";
+
+}
