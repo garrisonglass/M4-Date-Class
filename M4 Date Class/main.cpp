@@ -37,4 +37,12 @@ int main()
 	--d3;
 	cout << "Results: " << d3 << "\n\n";
 
+	//5 . Test postfix decrement operator (d--)
+	Date d4(1, 1, 2025);
+	cout << "Starting date for postfix decrement test: " << d4 << "\n";
+	cout << "Applying d4--\n";
+	Date d4_post = d4--;
+	cout << "Returned (post) value: " << d4_post << "\n";
+	cout << "New stored value: " << d4 << "\n";
+
 }
