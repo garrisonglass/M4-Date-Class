@@ -58,12 +58,9 @@ int main()
 	Date b(6, 8, 1986);
 	cout << "Testing subtraction operator -\n";
 	cout << a << " - " << b << " = " << (a - b) << " days\n\n";
-	
-	
-	Date c(6, 8, 1986);
-	Date d(10, 20, 1986);
 	cout << "Testing reverse order\n";
-	cout << c << " - " << d << " = " << (c - d) << " days\n\n";
+	cout << b << " - " << a << " = " << (b - a) << " days\n\n";
+	
 
 	Date e(1, 1, 2000);
 	Date f(1, 1, 2000);
