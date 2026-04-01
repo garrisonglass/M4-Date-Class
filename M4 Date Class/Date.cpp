@@ -291,7 +291,7 @@ istream& operator>>(istream& in, Date& d)
 		in.ignore(numeric_limits<streamsize>::max(), '\n');//Discard bad input
 		d.setDate(1, 1, 1900);//Default date
 		return in;
-	} logi
+	}
 	if (slash1 == '/' && slash2 == '/' && d.isValidDate(m, day, y))
 	{
 		d.setDate(m, day, y);

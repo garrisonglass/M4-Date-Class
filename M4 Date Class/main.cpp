@@ -63,7 +63,7 @@ int main()
 	Date c(6, 8, 1986);
 	Date d(10, 20, 1986);
 	cout << "Testing reverse order\n";
-	cout << c << " - " << d << " = " << (c - d) << " days\d\n";
+	cout << c << " - " << d << " = " << (c - d) << " days\n\n";
 
 	Date e(1, 1, 2000);
 	Date f(1, 1, 2000);
