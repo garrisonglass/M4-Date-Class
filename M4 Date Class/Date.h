@@ -1,4 +1,4 @@
-// Date_Class.cpp : This file contains the declarations of the Date class
+//Date.h : This file contains the declarations of the Date class
 
 #ifndef DATE_H
 #define DATE_H
