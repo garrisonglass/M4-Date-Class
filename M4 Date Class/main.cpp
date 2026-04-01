@@ -23,7 +23,7 @@ int main()
 	cout << "Results: " << d1 << "\n\n";
 
 	//3. Test postfix increment operator (d++)
-	Date d2(3, 14, 1593);
+	Date d2(3, 14, 2024);
 	cout << "Starting date for postfix increment test: " << d2 << "\n";	
 	cout << "Applying d2++\n";
 	Date d2_post = d2++;
